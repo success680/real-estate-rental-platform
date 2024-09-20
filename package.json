@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "prepare": "cd server && npm install",
-    "start": "npm run server & npm run dev",
+    "start": "concurrently \"npm run server\"  \"npm run dev\"",
     "server": "node ./server/index.js",
     "dev": "vite",
     "build": "vite build",
@@ -25,6 +25,7 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
+    "concurrently": "^9.0.1",
     "vite": "^3.0.7"
   }
 }
